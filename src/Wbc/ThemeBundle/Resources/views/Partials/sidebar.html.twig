@@ -1,0 +1,24 @@
+<nav id="sidebar" class="sidebar" role="navigation">
+    <!-- need this .js class to initiate slimscroll -->
+    <div class="js-sidebar-content">
+        <header class="logo hidden-xs" style="height:150px !important;">
+        
+             <img src="{{ asset('bundles/wbctheme/img/logoescenica.png') }}" style="display:block; text-align:center;margin:0 auto;     margin-bottom: 50px;">
+        </header>
+        <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
+             looks good, so adding it and enhancing with notifications -->
+        <div class="sidebar-status visible-xs">
+            {{ include('WbcThemeBundle:Partials:Widgets/sidebar/user.html.twig') }}
+            <!-- #notifications-dropdown-menu goes here when screen collapsed to xs or sm -->
+        </div>
+        <!-- main notification links are placed inside of .sidebar-nav -->
+        {{ include('WbcThemeBundle:Partials:Widgets/sidebar/menu.html.twig') }}
+        {{ include('WbcThemeBundle:Partials:Widgets/sidebar/labels.html.twig') }}
+        {{ include('WbcThemeBundle:Partials:Widgets/sidebar/projects.html.twig') }}
+    </div>
+</nav
+<style>
+.logo{
+    height:150px !important;
+}
+</style>

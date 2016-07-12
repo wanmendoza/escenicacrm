@@ -1,0 +1,309 @@
+<?php
+
+/* :settings:index.html.twig */
+class __TwigTemplate_0db84063d3b8e212755a786d7773349bc35fd9e3c2f02641e7e6518b8e51f337 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        // line 1
+        $this->parent = $this->loadTemplate("WbcThemeBundle::layout.html.twig", ":settings:index.html.twig", 1);
+        $this->blocks = array(
+            'breadcrumb' => array($this, 'block_breadcrumb'),
+            'title' => array($this, 'block_title'),
+            'body' => array($this, 'block_body'),
+        );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "WbcThemeBundle::layout.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $__internal_e5ac00226c2cbab332aab260bdc46fa4036b974a5eca387f354ff4379a03c910 = $this->env->getExtension("native_profiler");
+        $__internal_e5ac00226c2cbab332aab260bdc46fa4036b974a5eca387f354ff4379a03c910->enter($__internal_e5ac00226c2cbab332aab260bdc46fa4036b974a5eca387f354ff4379a03c910_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":settings:index.html.twig"));
+
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_e5ac00226c2cbab332aab260bdc46fa4036b974a5eca387f354ff4379a03c910->leave($__internal_e5ac00226c2cbab332aab260bdc46fa4036b974a5eca387f354ff4379a03c910_prof);
+
+    }
+
+    // line 3
+    public function block_breadcrumb($context, array $blocks = array())
+    {
+        $__internal_21d2e468f9561463a0dd9d2799d3df9d8f4be2bd8c270d41bd3eb41fa25244d7 = $this->env->getExtension("native_profiler");
+        $__internal_21d2e468f9561463a0dd9d2799d3df9d8f4be2bd8c270d41bd3eb41fa25244d7->enter($__internal_21d2e468f9561463a0dd9d2799d3df9d8f4be2bd8c270d41bd3eb41fa25244d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "breadcrumb"));
+
+        // line 4
+        echo "    ";
+        $this->displayParentBlock("breadcrumb", $context, $blocks);
+        echo "
+    <li class=\"active\">";
+        // line 5
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Settings list"), "html", null, true);
+        echo "</li>
+";
+        
+        $__internal_21d2e468f9561463a0dd9d2799d3df9d8f4be2bd8c270d41bd3eb41fa25244d7->leave($__internal_21d2e468f9561463a0dd9d2799d3df9d8f4be2bd8c270d41bd3eb41fa25244d7_prof);
+
+    }
+
+    // line 8
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_30f878265d79f7d96a183d7cd27209cde450710a05211faec0b28b96c80c2e44 = $this->env->getExtension("native_profiler");
+        $__internal_30f878265d79f7d96a183d7cd27209cde450710a05211faec0b28b96c80c2e44->enter($__internal_30f878265d79f7d96a183d7cd27209cde450710a05211faec0b28b96c80c2e44_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        // line 9
+        echo "    ";
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Settings list"), "html", null, true);
+        echo "
+";
+        
+        $__internal_30f878265d79f7d96a183d7cd27209cde450710a05211faec0b28b96c80c2e44->leave($__internal_30f878265d79f7d96a183d7cd27209cde450710a05211faec0b28b96c80c2e44_prof);
+
+    }
+
+    // line 12
+    public function block_body($context, array $blocks = array())
+    {
+        $__internal_d0363c50baf681fe97a3568e53dbe63d72beae6893927784090b5f0f1f0181b9 = $this->env->getExtension("native_profiler");
+        $__internal_d0363c50baf681fe97a3568e53dbe63d72beae6893927784090b5f0f1f0181b9->enter($__internal_d0363c50baf681fe97a3568e53dbe63d72beae6893927784090b5f0f1f0181b9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        // line 13
+        echo "    ";
+        $this->displayParentBlock("body", $context, $blocks);
+        echo "
+    <h1 class=\"page-title pull-left\">";
+        // line 14
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Settings list"), "html", null, true);
+        echo "</h1>
+
+    <div class=\"pull-right\">
+        ";
+        // line 17
+        if ($this->env->getExtension('wbc_extension')->get("use_translations")) {
+            // line 18
+            echo "        <a data-parent=\"#content\" class=\"btn btn-default btn-lg mb-xs\" href=\"";
+            echo $this->env->getExtension('routing')->getPath("locale_index");
+            echo "\"> <i class=\"fa fa-language\"></i> &nbsp; ";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Locale list"), "html", null, true);
+            echo "</a>
+        ";
+        }
+        // line 20
+        echo "        <a data-parent=\"#content\" class=\"btn btn-primary btn-lg mb-xs\" href=\"";
+        echo $this->env->getExtension('routing')->getPath("settings_new");
+        echo "\">";
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Create new"), "html", null, true);
+        echo "</a>
+    </div>
+
+    <div class=\"clearfix\"></div>
+    <br>
+
+    <section class=\"widget\">
+        <header>
+            <div class=\"widget-controls\">
+                <a data-widgster=\"expand\" title=\"Expand\" href=\"#\"><i class=\"glyphicon glyphicon-chevron-up\"></i></a>
+                <a data-widgster=\"collapse\" title=\"Collapse\" href=\"#\"><i class=\"glyphicon glyphicon-chevron-down\"></i></a>
+            </div>
+        </header>
+        <div class=\"widget-body\">
+            <div class=\"mt\">
+                <table id=\"datatable-table\" class=\"table table-striped table-hover\">
+                    <thead>
+                    <tr>                                                                                                                        
+                        <th class=\"no-sort\">";
+        // line 38
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Name"), "html", null, true);
+        echo "</th>
+                        <th class=\"\">";
+        // line 39
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("URL"), "html", null, true);
+        echo "</th>
+                        <th class=\"hidden-xs\">";
+        // line 40
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Active"), "html", null, true);
+        echo "</th>
+                        <th width=\"120\" class=\"no-sort\">";
+        // line 41
+        echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Actions"), "html", null, true);
+        echo "</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    ";
+        // line 46
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["settings"]) ? $context["settings"] : $this->getContext($context, "settings")));
+        foreach ($context['_seq'] as $context["_key"] => $context["setting"]) {
+            // line 47
+            echo "                        <tr>
+                            <td class=\"no-sort\">
+                                <span class=\"fw-semi-bold\">
+                                    <a href=\"";
+            // line 50
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("settings_show", array("id" => $this->getAttribute($context["setting"], "id", array()))), "html", null, true);
+            echo "\" data-remote=\"false\" class=\"modal-info\" data-toggle=\"modal\" data-target=\"#infoModal\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["setting"], "name", array()), "html", null, true);
+            echo "</a>
+                                </span>
+                            </td>
+                            <td class=\"\">
+                                ";
+            // line 54
+            echo twig_escape_filter($this->env, $this->getAttribute($context["setting"], "url", array()), "html", null, true);
+            echo "
+                            </td>
+                            <td class=\"hidden-xs\">";
+            // line 56
+            if ($this->getAttribute($context["setting"], "active", array())) {
+                echo " ";
+                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Yes"), "html", null, true);
+                echo " ";
+            } else {
+                echo " ";
+                echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("No"), "html", null, true);
+                echo " ";
+            }
+            echo "</td>
+                            <td class=\"no-sort\">
+                                <a data-parent=\"#content\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"";
+            // line 58
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Edit"), "html", null, true);
+            echo "\" data-original-title=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Edit"), "html", null, true);
+            echo "\" class=\"btn btn-default mb-xs\" role=\"button\" href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("settings_edit", array("id" => $this->getAttribute($context["setting"], "id", array()))), "html", null, true);
+            echo "\">
+                                    <i class=\"fa fa-edit\"></i>
+                                </a>
+                                &nbsp;
+                                <a data-parent=\"#content\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"";
+            // line 62
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Delete"), "html", null, true);
+            echo "\" data-original-title=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("Delete"), "html", null, true);
+            echo "\" class=\"btn btn-danger mb-xs btn-delete\" role=\"button\" href=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("settings_delete", array("id" => $this->getAttribute($context["setting"], "id", array()))), "html", null, true);
+            echo "\">
+                                    <i class=\"fa fa-trash-o\"></i>
+                                </a>
+                            </td>                    
+                        </tr>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['setting'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 68
+        echo "
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+";
+        
+        $__internal_d0363c50baf681fe97a3568e53dbe63d72beae6893927784090b5f0f1f0181b9->leave($__internal_d0363c50baf681fe97a3568e53dbe63d72beae6893927784090b5f0f1f0181b9_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return ":settings:index.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  206 => 68,  190 => 62,  179 => 58,  166 => 56,  161 => 54,  152 => 50,  147 => 47,  143 => 46,  135 => 41,  131 => 40,  127 => 39,  123 => 38,  99 => 20,  91 => 18,  89 => 17,  83 => 14,  78 => 13,  72 => 12,  62 => 9,  56 => 8,  47 => 5,  42 => 4,  36 => 3,  11 => 1,);
+    }
+}
+/* {% extends 'WbcThemeBundle::layout.html.twig' %}*/
+/* */
+/* {% block breadcrumb %}*/
+/*     {{ parent() }}*/
+/*     <li class="active">{{ 'Settings list' | trans }}</li>*/
+/* {% endblock %}*/
+/* */
+/* {% block title %}*/
+/*     {{ 'Settings list' | trans }}*/
+/* {% endblock %}*/
+/* */
+/* {% block body %}*/
+/*     {{ parent() }}*/
+/*     <h1 class="page-title pull-left">{{ 'Settings list' | trans }}</h1>*/
+/* */
+/*     <div class="pull-right">*/
+/*         {% if get('use_translations') %}*/
+/*         <a data-parent="#content" class="btn btn-default btn-lg mb-xs" href="{{ path('locale_index') }}"> <i class="fa fa-language"></i> &nbsp; {{ 'Locale list' | trans }}</a>*/
+/*         {% endif %}*/
+/*         <a data-parent="#content" class="btn btn-primary btn-lg mb-xs" href="{{ path('settings_new') }}">{{ 'Create new' | trans }}</a>*/
+/*     </div>*/
+/* */
+/*     <div class="clearfix"></div>*/
+/*     <br>*/
+/* */
+/*     <section class="widget">*/
+/*         <header>*/
+/*             <div class="widget-controls">*/
+/*                 <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>*/
+/*                 <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>*/
+/*             </div>*/
+/*         </header>*/
+/*         <div class="widget-body">*/
+/*             <div class="mt">*/
+/*                 <table id="datatable-table" class="table table-striped table-hover">*/
+/*                     <thead>*/
+/*                     <tr>                                                                                                                        */
+/*                         <th class="no-sort">{{ 'Name' | trans }}</th>*/
+/*                         <th class="">{{ 'URL' | trans }}</th>*/
+/*                         <th class="hidden-xs">{{ 'Active' | trans }}</th>*/
+/*                         <th width="120" class="no-sort">{{ 'Actions' | trans }}</th>*/
+/*                     </tr>*/
+/*                     </thead>*/
+/*                     <tbody>*/
+/* */
+/*                     {% for setting in settings %}*/
+/*                         <tr>*/
+/*                             <td class="no-sort">*/
+/*                                 <span class="fw-semi-bold">*/
+/*                                     <a href="{{ path('settings_show', { 'id': setting.id }) }}" data-remote="false" class="modal-info" data-toggle="modal" data-target="#infoModal">{{ setting.name }}</a>*/
+/*                                 </span>*/
+/*                             </td>*/
+/*                             <td class="">*/
+/*                                 {{ setting.url }}*/
+/*                             </td>*/
+/*                             <td class="hidden-xs">{% if setting.active %} {{ "Yes" | trans }} {% else %} {{ "No" | trans }} {% endif %}</td>*/
+/*                             <td class="no-sort">*/
+/*                                 <a data-parent="#content" data-toggle="tooltip" data-placement="top" title="{{ 'Edit' | trans }}" data-original-title="{{ 'Edit' | trans }}" class="btn btn-default mb-xs" role="button" href="{{ path('settings_edit', { 'id': setting.id }) }}">*/
+/*                                     <i class="fa fa-edit"></i>*/
+/*                                 </a>*/
+/*                                 &nbsp;*/
+/*                                 <a data-parent="#content" data-toggle="tooltip" data-placement="top" title="{{ 'Delete' | trans }}" data-original-title="{{ 'Delete' | trans }}" class="btn btn-danger mb-xs btn-delete" role="button" href="{{ path('settings_delete', { 'id': setting.id }) }}">*/
+/*                                     <i class="fa fa-trash-o"></i>*/
+/*                                 </a>*/
+/*                             </td>                    */
+/*                         </tr>*/
+/*                     {% endfor %}*/
+/* */
+/*                     </tbody>*/
+/*                 </table>*/
+/*             </div>*/
+/*         </div>*/
+/*     </section>*/
+/* */
+/* {% endblock %}*/
+/* */

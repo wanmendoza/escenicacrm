@@ -1,0 +1,25 @@
+<ul class="sidebar-nav">
+    <li {% if getMenuItem() == 'dashboard' %}class="active"{% endif %}>
+        <!-- an example of nested submenu. basic bootstrap collapse component -->
+        <a href="{{ path('wbc_administrator_homepage') }}" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fa fa-desktop"></i>
+                    </span>
+            {% trans %}Dashboard{% endtrans %}
+        </a>
+
+    </li>
+   
+
+</ul>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('ul.sidebar-nav').on('click', 'a:not([data-toggle])', function(){
+            var li = $(this).parent('li');
+            setTimeout(function(){
+                li.addClass('active');
+            }, 500);
+        });
+    });
+</script>
